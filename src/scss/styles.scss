@@ -1,0 +1,12 @@
+@import './theme-colors.scss' , '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+#content-wrap {
+    min-height: calc(100vh - 88px);
+}
+
+#footer {
+    padding: 20px;
+}
