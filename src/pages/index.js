@@ -1,11 +1,26 @@
 import React from "react"
 
-import FontAwesome from 'react-fontawesome'
+//import FontAwesome from 'react-fontawesome'
 import {  Container , Row , Col  } from "reactstrap"
 import Seo from '../components/seo'
 import Navibar from '../components/navibar'
 import Footer from '../components/footer'
-import CustomAlert from '../components/custom-alert'
+
+import { Icon, InlineIcon } from "@iconify/react"
+
+import reactIcon from '@iconify/icons-simple-icons/react'
+import sassIcon from '@iconify/icons-simple-icons/sass'
+import adobephotoshopIcon from '@iconify/icons-simple-icons/adobephotoshop'
+import githubIcon from '@iconify/icons-simple-icons/github'
+import gatsbyIcon from '@iconify/icons-simple-icons/gatsby'
+//import visualstudioIcon from '@iconify/icons-simple-icons/visualstudio'
+import wordpressIcon from '@iconify/icons-simple-icons/wordpress'
+import gulpIcon from '@iconify/icons-simple-icons/gulp'
+import mysqlIcon from '@iconify/icons-simple-icons/mysql'
+import bootstrapIcon from '@iconify/icons-simple-icons/bootstrap'
+
+import myFace from '../img/headshot_min.jpg'
+
 
 import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
@@ -19,46 +34,34 @@ export default function Home() {
 
         <Navibar/>
         
-        <Container>
+        <Container style={{position: 'absolute', width: '100%', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'}}>
             <Row>
-                <Col xs="12" className="text-center mt-4">
-                  <FontAwesome className="d-inline" name="rocket" size="2x" style={{marginRight: '5px'}} />
-                  <h3 className="d-inline">Simple Gatsby Bootstrap Boiler Plate</h3>
-                </Col>
-            </Row>
-              <hr style={{maxWidth: '300px'}}/>
-            <Row>
-              <Col xs="12" className="text-center mt-3 mb-3">
-                <h3>Plugins in use</h3>
+              <Col xs="12" className="text-center mb-1">
+                <img src={myFace} alt="My Face" style={{filter: 'grayscale(20%)', width: '180px', borderRadius: '50%', border: '3px solid #000'}}/>
               </Col>
               <Col xs="12" className="text-center">
-              <CustomAlert name="reactstrap" url="https://reactstrap.github.io/"></CustomAlert>
+                <h2>Anthony Tulumello</h2>
               </Col>
-              <Col xs="12" className="text-center"><CustomAlert name="Bootstrap" url="https://getbootstrap.com/"/></Col>
-              <Col xs="12" className="text-center"><CustomAlert name="Animate.css" url="https://animate.style/"/></Col>
-              <Col xs="12" className="text-center"><CustomAlert name="react-helmet" url="https://www.npmjs.com/package/react-helmet"/></Col>
-              <Col xs="12" className="text-center"><CustomAlert name="react-fontawesome" url="https://www.npmjs.com/package/react-fontawesome"/></Col>
-              <Col xs="12" className="text-center"><CustomAlert name="gatsby-plugin-sass" url="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sass"/></Col>
-              <Col xs="12" className="text-center"><CustomAlert name="gatsby-robots-txt" url="https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/"/></Col>
-              
-            </Row>
-            <Row>
-              <Col className="text-center mt-3 mb-3">
-                <h3>Features</h3>
+              <Col xs="12" className="text-center">
+                <h5>Front-End Developer</h5>
               </Col>
             </Row>
-            <Row>
-            <Col xs="12" lg="3" className="text-center">
-              <CustomAlert name="Always on Bottom Footer"/>
+
+            <Row className="mt-2">
+              <Col xs="12" className="text-center">
+                <InlineIcon icon={reactIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={sassIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={adobephotoshopIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={mysqlIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={gatsbyIcon} width="20" style={{margin: '0 5px'}}/>
               </Col>
-              <Col xs="12" lg="3" className="text-center">
-              <CustomAlert name="Multiple Code Use Examples"/>
+              <Col xs="12" className="text-center">
+                <InlineIcon icon={bootstrapIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={gulpIcon} width="20" style={{margin: '0 5px'}}/>
+                <InlineIcon icon={wordpressIcon} width="20" style={{margin: '0 5px'}}/>
               </Col>
-              <Col xs="12" lg="3" className="text-center">
-              <CustomAlert name="Bootstrap 4 Features"/>
-              </Col>
-              <Col xs="12" lg="3" className="text-center">
-              <CustomAlert name="Always Updated Footer"/>
+              <Col xs="12" className="text-center">
+                <InlineIcon icon={githubIcon} width="20" style={{margin: '0 5px'}}/>
               </Col>
             </Row>
         </Container>

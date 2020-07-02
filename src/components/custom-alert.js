@@ -1,5 +1,5 @@
 import React from "react"
-import {  Col , Alert } from "reactstrap"
+import {  Alert } from "reactstrap"
 
 
 const customAlertStyles = {

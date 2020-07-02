@@ -21,13 +21,16 @@ const Navibar = (props) => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/">SGBBP</NavbarBrand>
+      <Navbar light expand="md">
+        <NavbarBrand href="/"></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="https://github.com/atulumello">GitHub</NavLink>
+              <NavLink href="https://github.com/atulumello" target="_blank">GitHub</NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink href="mailto:anthonytulumello@gmail.com?subject=Hey! Let's Talk!">Contact Me</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

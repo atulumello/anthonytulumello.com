@@ -15,10 +15,10 @@ module.exports = {
             `gatsby-plugin-robots-txt`],
   
   siteMetadata: {
-    title: "SGBBP",
-    titleTemplate: "%s · Build Faster",
+    title: "Anthony Tulumello",
+    titleTemplate: "%s · Front-End Developer",
     description:
-      "I describe the project",
+      "Front-End Developer located in Ontario, seeking employment doing what he loves the most.. coding and drinking coffee &#128579;",
     url: siteData.url, 
     image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
   },

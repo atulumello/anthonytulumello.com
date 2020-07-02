@@ -1,7 +1,17 @@
 @import './theme-colors.scss' , '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+@import url('https://fonts.googleapis.com/css?family=Rubik|Karla');
 
+body {
+    background-color: lightgray;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
 
 #content-wrap {
     min-height: calc(100vh - 88px);
@@ -9,4 +19,15 @@
 
 #footer {
     padding: 20px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-light ul {
+        text-align: right;
+        margin-right: 50px;
+    }
 }
