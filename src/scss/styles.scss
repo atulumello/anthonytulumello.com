@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik|Karla');
 
 body {
-    background-color: lightgray;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -13,21 +12,10 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Karla', sans-serif;
 }
 
-#content-wrap {
-    min-height: calc(100vh - 88px);
-}
-
 #footer {
-    padding: 20px;
+    padding: 20px 0;
 }
 
-.navbar-light .navbar-toggler {
-    border-color: rgba(0, 0, 0, 0);
-}
-
-@media (max-width: 767.98px) {
-    .navbar-light ul {
-        text-align: right;
-        margin-right: 50px;
-    }
+#fp-nav ul li .fp-tooltip {
+    color: #000;
 }

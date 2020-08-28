@@ -1,75 +1,102 @@
 import React from "react"
+import ReactFullpage from "@fullpage/react-fullpage"
 
-//import FontAwesome from 'react-fontawesome'
-import {  Container , Row , Col  } from "reactstrap"
-import Seo from '../components/seo'
-import Navibar from '../components/navibar'
+import Menu from '../components/menu'
 import Footer from '../components/footer'
 
-import { Icon, InlineIcon } from "@iconify/react"
-
-import reactIcon from '@iconify/icons-simple-icons/react'
-import sassIcon from '@iconify/icons-simple-icons/sass'
-import adobephotoshopIcon from '@iconify/icons-simple-icons/adobephotoshop'
-import githubIcon from '@iconify/icons-simple-icons/github'
-import gatsbyIcon from '@iconify/icons-simple-icons/gatsby'
-//import visualstudioIcon from '@iconify/icons-simple-icons/visualstudio'
-import wordpressIcon from '@iconify/icons-simple-icons/wordpress'
-import gulpIcon from '@iconify/icons-simple-icons/gulp'
-import mysqlIcon from '@iconify/icons-simple-icons/mysql'
-import bootstrapIcon from '@iconify/icons-simple-icons/bootstrap'
-
-import myFace from '../img/headshot_min.jpg'
-
-
-import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
 
-export default function Home() {
-  return (
-    <div>
-    <Seo />
-    <div id="page-container">
-      <div id ="content-wrap">
 
-        <Navibar/>
-        
-        <Container style={{position: 'absolute', width: '100%', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'}}>
-            <Row>
-              <Col xs="12" className="text-center mb-1">
-                <img src={myFace} alt="My Face" style={{filter: 'grayscale(20%)', width: '180px', borderRadius: '50%', border: '3px solid #000'}}/>
-              </Col>
-              <Col xs="12" className="text-center">
-                <h2>Anthony Tulumello</h2>
-              </Col>
-              <Col xs="12" className="text-center">
-                <h5>Front-End Developer</h5>
-              </Col>
-            </Row>
+const SEL = 'custom-section'
+const SECTION_SEL = `.${SEL}`
 
-            <Row className="mt-2">
-              <Col xs="12" className="text-center">
-                <InlineIcon icon={reactIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={sassIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={adobephotoshopIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={mysqlIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={gatsbyIcon} width="20" style={{margin: '0 5px'}}/>
-              </Col>
-              <Col xs="12" className="text-center">
-                <InlineIcon icon={bootstrapIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={gulpIcon} width="20" style={{margin: '0 5px'}}/>
-                <InlineIcon icon={wordpressIcon} width="20" style={{margin: '0 5px'}}/>
-              </Col>
-              <Col xs="12" className="text-center">
-                <InlineIcon icon={githubIcon} width="20" style={{margin: '0 5px'}}/>
-              </Col>
-            </Row>
-        </Container>
+// NOTE: if using fullpage extensions/plugins put them here and pass it as props.
+// This is no longer required for the scrollOverflow option.
+const pluginWrapper = () => {
+  /*
+  * require('./fullpage.fadingEffect.min'); // Optional. Required when using the "fadingEffect" extension.
+  */
+};
 
+const bgColors = ['#FFF', '#0798ec', '#fc6c7c', '#435b71', 'orange', 'blue', 'purple', 'yellow']
 
+class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      sectionsColor: [...bgColors],
+      fullpages: [
+        {
+          title: 'Welcome',
+          content: 'Hello!'
+        },
+        {
+          title: 'About Me',
+          content: 'I am content',
+        },
+        {
+          title: 'Portfolio',
+          content: 'Portfolio'
+        },
+        {
+          title: 'Contact Me',
+          content: 'Contact Form'
+        }
+      ],
+    };
+  }
+
+  onLeave(origin, destination, direction) {
+    console.log('onLeave', { origin, destination, direction })
+    // arguments are mapped in order of fullpage.js callback arguments do something
+    // with the event
+  }
+
+  moveSectionDown() {
+    window.fullpage_api.moveSectionDown()
+  }
+
+  render() {
+    const { fullpages } = this.state
+
+    if (!fullpages.length) {
+      return null;
+    }
+
+    return (
+      <div className="App">
+        <Menu />
+        <ReactFullpage
+          debug /* Debug logging */
+
+          // Required when using extensions
+          pluginWrapper={pluginWrapper}
+
+          // fullpage options
+          licenseKey={'YOUR_KEY_HERE'} // Get one from https://alvarotrigo.com/fullPage/pricing/
+          navigation
+          navigationPosition= {'right'}
+	        navigationTooltips= {['Welcome', 'About Me', 'Portfolio', 'Contact Me']}
+	        showActiveTooltip= {true}
+          anchors={['welcome', 'about', 'portfolio', 'contact']}
+          sectionSelector={SECTION_SEL}
+          onLeave={this.onLeave.bind(this)}
+          sectionsColor={this.state.sectionsColor}
+
+          render={comp => (
+            <ReactFullpage.Wrapper>
+              {fullpages.map(({ title , content }) => (
+                <div key={title} className={SEL}>
+                  <div>{content}</div>
+                </div>
+              ))}
+            </ReactFullpage.Wrapper>
+          )}
+        />
+        <Footer />
       </div>
-     </div>
-    <Footer />
-    </div>
-  )
+    )
+  }
 }
+
+export default Home
