@@ -1,0 +1,32 @@
+.spaceman{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    z-index: 9999;
+    animation: linear infinite alternate;
+    animation-name: runSpaceman;
+    animation-duration: 15s;
+
+        img {
+            width: 200px;
+        }
+    }     
+
+
+    @keyframes runSpaceman {
+    0% {
+        left: -15%;
+        top: -300px;
+        transform: rotate(360deg) scale(1);
+    }
+    50%{
+        left: 95%;
+        top: 95%;
+        transform: rotate(180deg) scale(1.5);
+    }
+    100%{
+        left: 100%;
+        top: 1%;
+        transform: rotate(0deg) scale(1);
+    }
+}   

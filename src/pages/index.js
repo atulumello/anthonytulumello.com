@@ -2,6 +2,7 @@ import React from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 
 import Menu from '../components/menu'
+import Welcome from '../components/welcome/'
 import Footer from '../components/footer'
 
 import '../scss/styles.scss'
@@ -28,7 +29,7 @@ class Home extends React.Component {
       fullpages: [
         {
           title: 'Welcome',
-          content: 'Hello!'
+          content: <Welcome />
         },
         {
           title: 'About Me',
@@ -81,7 +82,7 @@ class Home extends React.Component {
           anchors={['welcome', 'about', 'portfolio', 'contact']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
-          sectionsColor={this.state.sectionsColor}
+          //sectionsColor={this.state.sectionsColor}
 
           render={comp => (
             <ReactFullpage.Wrapper>
