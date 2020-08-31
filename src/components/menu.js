@@ -22,17 +22,14 @@ const Menu = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="#about">About Me</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink href="#portfolio">Portfolio</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#contact">Contact Me</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="https://github.com/atulumello">GitHub</NavLink>
-            </NavItem>
+            </NavItem> */}
             
           </Nav>
         </Collapse>

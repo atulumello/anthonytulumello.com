@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage"
 
 import Menu from '../components/menu'
 import Welcome from '../components/welcome/'
+import Portfolio from '../components/portfolio'
 import Footer from '../components/footer'
 
 import '../scss/styles.scss'
@@ -32,12 +33,8 @@ class Home extends React.Component {
           content: <Welcome />
         },
         {
-          title: 'About Me',
-          content: 'I am content',
-        },
-        {
           title: 'Portfolio',
-          content: 'Portfolio'
+          content: <Portfolio />
         },
         {
           title: 'Contact Me',
@@ -75,11 +72,11 @@ class Home extends React.Component {
 
           // fullpage options
           licenseKey={'YOUR_KEY_HERE'} // Get one from https://alvarotrigo.com/fullPage/pricing/
-          navigation
+          //navigation
           navigationPosition= {'right'}
-	        navigationTooltips= {['Welcome', 'About Me', 'Portfolio', 'Contact Me']}
+	        navigationTooltips= {['Welcome', 'Portfolio', 'Contact Me']}
 	        showActiveTooltip= {true}
-          anchors={['welcome', 'about', 'portfolio', 'contact']}
+          anchors={['welcome', 'portfolio', 'contact']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
           //sectionsColor={this.state.sectionsColor}
@@ -88,6 +85,7 @@ class Home extends React.Component {
             <ReactFullpage.Wrapper>
               {fullpages.map(({ title , content }) => (
                 <div key={title} className={SEL}>
+                  <div className="fp-bg"></div>
                   <div>{content}</div>
                 </div>
               ))}

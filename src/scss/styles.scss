@@ -5,6 +5,7 @@
 
 //Colors
 $white: #FFF;
+$black: #000;
 
 body {
     font-family: 'Rubik', sans-serif;
@@ -17,20 +18,29 @@ h1,h2,h3,h4,h5,h6 {
 
 #footer {
     padding: 20px 0;
+    .footer-anchor {
+        margin: 0 5px;
+    }
 }
 
 #fp-nav ul li .fp-tooltip {
-    color: #000;
+    color: $black;
 }
 
+
+////Welcome////
+
 .fp-viewing-welcome {
-    background-image: url('../../static/space.jpg');
+    background-image: url('../../static/welcome_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     .nav-item a {
         color: $white;
+        &:hover {
+            color: $black;
+        }   
     }
     .navbar-toggler{
         border: none;
@@ -46,8 +56,46 @@ h1,h2,h3,h4,h5,h6 {
     }
     #footer {
         color: $white;
-    }
-  
-}
 
+        .footer-anchor {
+            color: $white;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+///Portfolio////
+.fp-viewing-portfolio {
+    background-color: #fff;
+
+
+    .nav-item a {
+        color: $black;
+        &:hover {
+            color: rgba(0,0,0,0.4);
+        }
+    }
+    .navbar-toggler{
+        border: none;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    #fp-nav a span {
+        background: $black;
+    }
+    #fp-nav .fp-tooltip {
+        color: $black;
+    }
+    #footer {
+        color: $black;
+        .footer-anchor {
+            color: $black;
+            &:hover {
+                color: rgba(0,0,0,0.4);
+            }
+        }
+    }
+}
 
