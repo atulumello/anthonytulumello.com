@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col , Button } from 'reactstrap'
-import { FaGithub } from 'react-icons/fa'
+import { InlineIcon } from '@iconify/react'
+import githubIcon from '@iconify/icons-logos/github-icon'
 
-import styles from './welcome.module.css'
 
 class Welcome extends React.Component {
 
@@ -24,8 +24,8 @@ class Welcome extends React.Component {
                             <p className="mb-3" style={{fontSize: '25px', maxWidth: '800px', margin: '0 auto', color: '#fff'}}>I'm a Canadian front-end focused web developer with a wide array of knowledge in different stacks, both front and back.</p>
                         </Col>
                         <Col xs={12} className="text-center">
-                            <Button onClick={this.goToGit} className={styles.gitButton} outline>
-                                    <FaGithub style={{margin: '0 4px 3px 0'}} />
+                            <Button onClick={this.goToGit} className="gitButton">
+                                    <InlineIcon icon={githubIcon} style={{margin: '0 4px 3px 0'}} />
                                     View my GitHub
                             </Button>
                         </Col>

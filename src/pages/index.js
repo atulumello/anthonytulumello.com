@@ -85,7 +85,6 @@ class Home extends React.Component {
             <ReactFullpage.Wrapper>
               {fullpages.map(({ title , content }) => (
                 <div key={title} className={SEL}>
-                  <div className="fp-bg"></div>
                   <div>{content}</div>
                 </div>
               ))}
