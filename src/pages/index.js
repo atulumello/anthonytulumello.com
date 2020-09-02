@@ -4,7 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage"
 import Menu from '../components/menu'
 import Welcome from '../components/welcome/'
 import Portfolio from '../components/portfolio'
-import Footer from '../components/footer'
+import Contact from '../components/contact'
 
 import '../scss/styles.scss'
 
@@ -38,7 +38,7 @@ class Home extends React.Component {
         },
         {
           title: 'Contact Me',
-          content: 'Contact Form'
+          content: <Contact />
         }
       ],
     };
@@ -75,7 +75,8 @@ class Home extends React.Component {
           //navigation
           navigationPosition= {'right'}
 	        navigationTooltips= {['Welcome', 'Portfolio', 'Contact Me']}
-	        showActiveTooltip= {true}
+          showActiveTooltip= {true}
+          lockAnchors= {true}
           anchors={['welcome', 'portfolio', 'contact']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
@@ -91,7 +92,6 @@ class Home extends React.Component {
             </ReactFullpage.Wrapper>
           )}
         />
-        <Footer />
       </div>
     )
   }

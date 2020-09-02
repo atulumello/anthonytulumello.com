@@ -77,6 +77,14 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.fp-viewing-contact {
+    background-color: #81b9bf;
+    
+}
+
+.fp-viewing-welcome , .fp-viewing-contact {
 
     .nav-item a {
         color: $white;
@@ -107,8 +115,21 @@ p {
         }
     }
 }
+
+.fp-viewing-contact {
+    #footer {
+        color: $black;
+
+        .footer-anchor {
+            color: $black;
+            &:hover {
+                color: rgba(0,0,0,0.4);
+            }
+        }
+    }
+}
 ///Portfolio////
-.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 {
+.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 {
     background-color: #fafafa;
 
 
