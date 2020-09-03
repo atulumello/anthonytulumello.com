@@ -39,10 +39,10 @@ class fseCalculator extends React.Component {
                                     </Col>
                                     <Col xs={12}>
                                         <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={gatsbyIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={nodejsIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={firebaseIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={bootstrapIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={sassIcon} /></a>
+                                        <a href="https://nodejs.org/" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={nodejsIcon} /></a>
+                                        <a href="https://firebase.google.com/" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={firebaseIcon} /></a>
+                                        <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={bootstrapIcon} /></a>
+                                        <a href="https://sass-lang.com/" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon" ><Icon icon={sassIcon} /></a>
                                     </Col>
                                     <Col xs={12}>
                                         <p className="mt-2 mb-2">A simple loan calculator built for an aviation economy game. NodeJs communicates with Google Firebase in order to dynamically update available funds from the game world api.</p>

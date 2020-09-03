@@ -76,7 +76,7 @@ class Home extends React.Component {
           navigationPosition= {'right'}
 	        navigationTooltips= {['Welcome', 'Portfolio', 'Contact Me']}
           showActiveTooltip= {true}
-          lockAnchors= {true}
+          lockAnchors= {false}
           anchors={['welcome', 'portfolio', 'contact']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}

@@ -29,8 +29,8 @@ class Anthonytulumello extends React.Component {
                                     </Col>
                                     <Col xs={12}>
                                         <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon d-inline" ><Icon icon={gatsbyIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon d-inline" ><Icon icon={bootstrapIcon} /></a>
-                                        <a href="https://www.gatsby.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon d-inline" ><Icon icon={sassIcon} /></a>
+                                        <a href="https://getbootstrap.com" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon d-inline" ><Icon icon={bootstrapIcon} /></a>
+                                        <a href="https://sass-lang.com/" target="_blank" rel="noreferrer" aria-label="Gatsby" className="portfolio-icon d-inline" ><Icon icon={sassIcon} /></a>
                                     </Col>
                                     <Col xs={12}>
                                         <p className="mt-2">My personal website you are viewing now, wrapped with fullpagejs. My goal was to show some of my knowledge while being as simple as possible.</p>
@@ -44,6 +44,7 @@ class Anthonytulumello extends React.Component {
                                         <Badge>react-helmet</Badge>
                                         <Badge>react-robots-txt</Badge>
                                         <Badge>iconify/react</Badge>
+                                        <Badge>Formik</Badge>
                                     </Col>
                                 </Row>
                             </Col>
