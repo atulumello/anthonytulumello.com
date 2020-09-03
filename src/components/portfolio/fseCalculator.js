@@ -11,7 +11,7 @@ import bootstrapIcon from '@iconify/icons-logos/bootstrap'
 import nodejsIcon from '@iconify/icons-logos/nodejs'
 import sassIcon from '@iconify/icons-logos/sass'
 
-import gtaPreview from '../../../static/gta_preview.png'
+import Preview from '../../../static/gta_preview_2.png'
 
 class fseCalculator extends React.Component {
 
@@ -20,7 +20,7 @@ class fseCalculator extends React.Component {
             <Container>
                         <Row className="align-items-center">
                             <Col xs={12} lg={6} className="text-center">
-                                <img className="portfolio-img" src={gtaPreview} alt='GTA Preview' />
+                                <img className="portfolio-img mb-4" src={Preview} alt='GTA Preview' />
                                 <Col xs={12}>
                                     <Button onClick={() => {window.open(this.props.github, '_blank')}} className="portfolio-button d-inline" outline>
                                         <InlineIcon icon={githubIcon} style={{margin: '0 4px 3px 0'}} />

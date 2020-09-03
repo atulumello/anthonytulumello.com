@@ -6,7 +6,7 @@ import { Icon , InlineIcon } from '@iconify/react'
 import webIcon from '@iconify/icons-mdi/web'
 import wordpressIcon from '@iconify/icons-logos/wordpress-icon'
 
-import gtaPreview from '../../../static/gta_preview.png'
+import Preview from '../../../static/photoSite_preview_2.png'
 
 class Photosite extends React.Component {
 
@@ -15,7 +15,7 @@ class Photosite extends React.Component {
             <Container>
                         <Row className="align-items-center">
                             <Col xs={12} lg={6} className="text-center">
-                                <img className="portfolio-img" src={gtaPreview} alt='GTA Preview' />
+                                <img className="portfolio-img mb-4" src={Preview} alt='GTA Preview' />
                                 <Col xs={12}>
                                     <Button onClick={() => {window.open(this.props.live, '_blank')}} className="portfolio-button d-inline" outline>
                                         <InlineIcon icon={webIcon} style={{margin: '0 4px 3px 0', fontSize: '18px'}} />

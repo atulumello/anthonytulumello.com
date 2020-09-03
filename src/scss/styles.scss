@@ -62,7 +62,7 @@ p {
 }
 
 .portfolio-img {
-    width: 300px;
+    width: 350px;
 }
 
 .badge {
@@ -183,5 +183,17 @@ p {
     }
     .badge {
         margin: 0 5px 0 0;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .portfolio-img {
+        width: 475px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .portfolio-img {
+        width: 525px;
     }
   }
