@@ -6,7 +6,7 @@ import { Icon , InlineIcon } from '@iconify/react'
 import webIcon from '@iconify/icons-mdi/web'
 import wordpressIcon from '@iconify/icons-logos/wordpress-icon'
 
-import Preview from '../../../static/photoSite_preview_2.png'
+import Preview from '../../../static/photosite_preview_2.png'
 
 class Photosite extends React.Component {
 
