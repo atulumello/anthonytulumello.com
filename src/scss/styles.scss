@@ -72,19 +72,21 @@ p {
 
 ////Welcome////
 
-.fp-viewing-welcome {
-    background-image: url('../../static/welcome_bg.jpg');
+.fp-viewing-welcome , .fp-viewing-contact {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-// .fp-viewing-contact {
-//     background-color: #81b9bf;
-    
-// }
+.fp-viewing-welcome {
+    background-image: url('../../static/welcome_bg.jpg');
+}
 
-.fp-viewing-welcome , .fp-viewing-contact {
+.fp-viewing-contact {
+    background-image: url('../../static/contact_bg.jpg');  
+}
+
+.fp-viewing-welcome {
 
     .nav-item a {
         color: $white;
@@ -129,10 +131,11 @@ p {
     }
 }
 ///Portfolio////
-.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 {
+.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 , .fp-viewing-portfolio-3 {
     background-color: #fafafa;
+}
 
-
+.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 , .fp-viewing-portfolio-3 , .fp-viewing-contact {
     .nav-item a {
         color: $black;
         &:hover {

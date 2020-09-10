@@ -71,13 +71,13 @@ const Contact = () => {
                             <p>You can send me a message below or DM me on social media.</p>
                         </Col>
                         <Col xs={12} className="text-center">
-                            <a className={styles.socialLink} href="https://github.com/atulumello">
+                            <a className={styles.socialLink} target="_blank" rel="noreferrer"  href="https://github.com/atulumello">
                                 <FaGithub />
                             </a>
-                            <a className={styles.socialLink} href="https://instagram.com/atulumello">
+                            <a className={styles.socialLink} target="_blank" rel="noreferrer"  href="https://instagram.com/anthonytulumello">
                                 <FaInstagram />
                             </a>
-                            <a className={styles.socialLink} href="https://linkedin.com/atulumello">
+                            <a className={styles.socialLink} target="_blank" rel="noreferrer"  href="https://www.linkedin.com/in/anthonytulumello/">
                                 <FaLinkedin />
                             </a>
                         </Col>
@@ -115,10 +115,6 @@ const Contact = () => {
                         </Row>
                     </Form>
                 </Container>
-                
-                {/* <svg style={{position: 'absolute', bottom: '0', width: '100%', height: '100px', fill:"#fafafa", transform: "scaleY(-1)"}} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 598.97 114.72 1200 0z"></path>
-                </svg> */}
                 <Footer />
             </div>
         )

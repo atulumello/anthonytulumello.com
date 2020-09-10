@@ -20,13 +20,13 @@ class Footer extends React.Component {
                   <p style={{margin: '0', fontSize: '13px'}}>&copy;{this.date} Anthony Tulumello</p>
                 </Col>
                 <Col xs={12} className="text-center">
-                  <a className="footer-anchor" href="https://github.com/atulumello">
+                  <a className="footer-anchor" target="_blank" rel="noreferrer" href="https://github.com/atulumello">
                     <FaGithub />
                   </a>
-                  <a className="footer-anchor" href="https://instagram.com/atulumello">
+                  <a className="footer-anchor" target="_blank" rel="noreferrer"  href="https://instagram.com/anthonytulumello">
                     <FaInstagram />
                   </a>
-                  <a className="footer-anchor" href="https://linkedin.com/atulumello">
+                  <a className="footer-anchor" target="_blank" rel="noreferrer"  href="https://www.linkedin.com/in/anthonytulumello/">
                     <FaLinkedin />
                   </a>
                 </Col>

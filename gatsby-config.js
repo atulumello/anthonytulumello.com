@@ -5,7 +5,7 @@
  */
 
 const siteData = {
-  url: "www.changeme.com", // No trailing slash allowed!
+  url: "www.anthonytulumello.com", // No trailing slash allowed!
 }
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
     title: "Anthony Tulumello",
     titleTemplate: "%s · Front-End Developer",
     description:
-      "Front-End Developer located in Ontario, seeking employment doing what he loves the most.. coding and drinking coffee &#128579;",
+      "A Canadian front-end focused web developer with a wide array of knowledge in different stacks, both front and back. &#128187;",
     url: siteData.url, 
     image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
   },
