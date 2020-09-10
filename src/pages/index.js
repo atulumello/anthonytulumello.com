@@ -1,6 +1,7 @@
 import React from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 
+import SEO from '../components/seo'
 import Menu from '../components/menu'
 import Welcome from '../components/welcome/'
 import Portfolio from '../components/portfolio'
@@ -63,6 +64,7 @@ class Home extends React.Component {
 
     return (
       <div className="App">
+        <SEO />
         <Menu />
         <ReactFullpage
           debug /* Debug logging */
