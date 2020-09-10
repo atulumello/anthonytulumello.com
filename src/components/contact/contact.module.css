@@ -1,0 +1,14 @@
+.socialLink{
+    color: #000;
+    margin: 0 5px;
+    font-size: 22px;
+}
+.socialLink:hover {
+    color: rgba(0,0,0,0.4);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+}

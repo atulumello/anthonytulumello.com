@@ -7,7 +7,7 @@ My personal minimal gatsby/bootstrap landing page
 ### Plugins
 * reactstrap
 * Bootstrap
-* Animate.css
 * react-helmet
 * gatsby-plugin-sass
-* gatsby-robots-txt
+* formik
+* fullpagejs

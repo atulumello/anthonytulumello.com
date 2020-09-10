@@ -3,8 +3,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik|Karla');
 
+//Colors
+$white: #FFF;
+$black: #000;
+
 body {
-    background-color: lightgray;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -13,21 +16,187 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Karla', sans-serif;
 }
 
-#content-wrap {
-    min-height: calc(100vh - 88px);
+p {
+    margin: 0;
 }
 
 #footer {
-    padding: 20px;
-}
-
-.navbar-light .navbar-toggler {
-    border-color: rgba(0, 0, 0, 0);
-}
-
-@media (max-width: 767.98px) {
-    .navbar-light ul {
-        text-align: right;
-        margin-right: 50px;
+    padding: 20px 0;
+    .footer-anchor {
+        margin: 0 5px;
     }
 }
+
+#fp-nav ul li .fp-tooltip {
+    color: $black;
+}
+
+.gitButton {
+    color: #000 !important;
+    background-color: #fff;
+    border: 1px solid #fff !important;
+    padding: 10px 30px !important;
+}
+.gitButton:hover {
+    color: #000 !important;
+    border: 1px solid #000 !important;
+    background-color: transparent !important;
+}
+
+.portfolio-button {
+    color: #000 !important;
+    border: 1px solid #000 !important;
+    padding: 10px 0 !important;
+    width: 170px;
+    margin: 0 5px 10px;
+}
+.portfolio-button:hover {
+    //color: rgba(0,0,0,0.4) !important;
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    background-color: transparent !important;
+}
+
+.portfolio-icon {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.portfolio-img {
+    width: 350px;
+}
+
+.badge {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+////Welcome////
+
+.fp-viewing-welcome , .fp-viewing-contact {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fp-viewing-welcome {
+    background-image: url('../../static/welcome_bg.jpg');
+}
+
+.fp-viewing-contact {
+    background-image: url('../../static/contact_bg.jpg');  
+}
+
+.fp-viewing-welcome {
+
+    .nav-item a {
+        color: $white;
+        &:hover {
+            color: $black;
+        }   
+    }
+    .navbar-toggler{
+        border: none;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    #fp-nav a span {
+        background: $white;
+    }
+    #fp-nav .fp-tooltip {
+        color: $white;
+    }
+    #footer {
+        color: $white;
+
+        .footer-anchor {
+            color: $white;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+.fp-viewing-contact {
+    #footer {
+        color: $black;
+
+        .footer-anchor {
+            color: $black;
+            &:hover {
+                color: rgba(0,0,0,0.4);
+            }
+        }
+    }
+}
+///Portfolio////
+.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 , .fp-viewing-portfolio-3 {
+    background-color: #fafafa;
+}
+
+.fp-viewing-portfolio-0 , .fp-viewing-portfolio-1 , .fp-viewing-portfolio-2 , .fp-viewing-portfolio-3 , .fp-viewing-contact {
+    .nav-item a {
+        color: $black;
+        &:hover {
+            color: rgba(0,0,0,0.4);
+        }
+    }
+    .navbar-toggler{
+        border: none;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    #fp-nav a span {
+        background: $black;
+    }
+    #fp-nav .fp-tooltip {
+        color: $black;
+    }
+
+    #footer {
+        color: $black;
+        .footer-anchor {
+            color: $black;
+            &:hover {
+                color: rgba(0,0,0,0.4);
+            }
+        }
+    }
+}
+
+///Portfolio
+
+.fp-prev {
+    border-color: transparent #000 transparent transparent !important;
+}
+
+.fp-next {
+    border-color: transparent transparent transparent #000 !important;
+}
+
+
+@media only screen and (min-width: 576px) {
+    .portfolio-img {
+        width: 500px;
+    }
+    .portfolio-button {
+        margin: 0 5px 10px;
+    }
+    .badge {
+        margin: 0 5px 0 0;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .portfolio-img {
+        width: 475px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .portfolio-img {
+        width: 525px;
+    }
+  }
