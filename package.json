@@ -23,7 +23,6 @@
     "formik": "^2.1.5",
     "gatsby": "^2.22.15",
     "gatsby-plugin-react-helmet": "^3.3.4",
-    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.4",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

@@ -11,8 +11,7 @@ const siteData = {
 module.exports = {
   /* Your site config here */
   plugins: [`gatsby-plugin-sass`,
-              `gatsby-plugin-react-helmet`,
-            `gatsby-plugin-robots-txt`],
+              `gatsby-plugin-react-helmet`],
   
   siteMetadata: {
     title: "Anthony Tulumello",
