@@ -82,7 +82,7 @@ const Contact = () => {
                             </a>
                         </Col>
                     </Row>
-                    <Form onSubmit={formik.submitForm} action={`${process.env.FORM_SUBMIT}`} method="POST">
+                    <Form onSubmit={formik.submitForm} action={`${process.env.GATSBY_FORM_SUBMIT}`} method="POST">
                         <Row style={{maxWidth: '600px', margin: '0 auto', paddingTop: '20px'}}>
                             <Col xs={12} md={6}>
                                 <FormGroup>
