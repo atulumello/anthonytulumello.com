@@ -38,12 +38,28 @@ const Contact = () => {
         initialValues: {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            status: ''
         },
         validate,
-        onSubmit: values => {
-            alert(JSON.stringify(values , null , 2 ))
-        }
+        submitForm(ev) {
+            ev.preventDefault();
+            const form = ev.target;
+            const data = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = () => {
+              if (xhr.readyState !== XMLHttpRequest.DONE) return;
+              if (xhr.status === 200) {
+                form.reset();
+                this.setState({ status: "SUCCESS" });
+              } else {
+                this.setState({ status: "ERROR" });
+              }
+            };
+            xhr.send(data);
+          }
     })
 
         return(
@@ -66,7 +82,7 @@ const Contact = () => {
                             </a>
                         </Col>
                     </Row>
-                    <Form onSubmit={formik.handleSubmit}>
+                    <Form onSubmit={formik.submitForm} action={`${process.env.FORM_SUBMIT}`} method="POST">
                         <Row style={{maxWidth: '600px', margin: '0 auto', paddingTop: '20px'}}>
                             <Col xs={12} md={6}>
                                 <FormGroup>
