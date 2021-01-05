@@ -4,6 +4,7 @@ import FseCalculator from './fseCalculator'
 import Anthonytulumello from './anthonytulumello'
 import Photosite from './photosite'
 import Boiler from './boiler'
+import Yampa from './fseYVA'
 
 
 
@@ -18,6 +19,10 @@ class Portfolio extends React.Component {
             fseCalculator: {
                 live: 'https://www.greatertorontofinancial.com',
                 github: 'https://github.com/atulumello/fse-calculator'
+            },
+            fseYVA: {
+                live: 'https://fse-yva.vercel.app/',
+                github: 'None'
             },
             anthonytulumello: {
                 github: 'https://github.com/atulumello/anthonytulumello.com'
@@ -40,6 +45,9 @@ class Portfolio extends React.Component {
 
                 <div className="slide">
                     <FseCalculator github={this.project.fseCalculator.github} live={this.project.fseCalculator.live} />
+                </div>
+                <div className="slide">
+                    <Yampa live={this.project.fseYVA.live} />
                 </div>
                 <div className="slide">
                     <Anthonytulumello github={this.project.anthonytulumello.github} />
